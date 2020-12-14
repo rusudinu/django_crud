@@ -2,8 +2,6 @@
 
 # Technical documentation
 ## Frameworks / Tools used
-<p align="left">
 * Python
 * Django
 * SQLITE3
-</p>
