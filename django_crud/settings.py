@@ -22,9 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '@&c9iq8e32e=j(9^$g0myn!yw=oc442yirs8b_w8)8&h-l_kj7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # set this to False for the custom error pages to work
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = []  # '127.0.0.1'
 
 # Application definition
 
