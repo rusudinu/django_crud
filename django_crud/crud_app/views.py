@@ -4,19 +4,35 @@ from django.forms import ModelForm
 
 
 def error_404(request, template_name='error_pages/404.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def error_400(request, template_name='error_pages/400.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def error_403(request, template_name='error_pages/403.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def error_500(request, template_name='error_pages/500.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def main_page(request, template_name='pages/main_page.html'):
