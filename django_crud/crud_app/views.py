@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+import uuid
 from django.forms import ModelForm
 
 
@@ -19,7 +20,11 @@ def error_500(request, template_name='error_pages/500.html'):
 
 
 def main_page(request, template_name='pages/main_page.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def new_project(request, template_name='pages/main_page.html'):
@@ -39,14 +44,26 @@ def update_project(request, template_name='pages/main_page.html'):
 
 
 def work(request, template_name='pages/work.html'):
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/work?sid=' + session_id)
     return render(request, template_name)
 
 
 def mobile(request, template_name='pages/mobile.html'):
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/mobile?sid=' + session_id)
     return render(request, template_name)
 
 
 def web(request, template_name='pages/web.html'):
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/web?sid=' + session_id)
     return render(request, template_name)
 
 
