@@ -48,7 +48,7 @@ def work(request, template_name='pages/work.html'):
     if session_id == '':
         session_id = uuid.uuid4().hex
         return redirect('/work?sid=' + session_id)
-    return render(request, template_name)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def mobile(request, template_name='pages/mobile.html'):
@@ -56,7 +56,7 @@ def mobile(request, template_name='pages/mobile.html'):
     if session_id == '':
         session_id = uuid.uuid4().hex
         return redirect('/mobile?sid=' + session_id)
-    return render(request, template_name)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def web(request, template_name='pages/web.html'):
@@ -64,7 +64,7 @@ def web(request, template_name='pages/web.html'):
     if session_id == '':
         session_id = uuid.uuid4().hex
         return redirect('/web?sid=' + session_id)
-    return render(request, template_name)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def awards(request, template_name='pages/awards.html'):
