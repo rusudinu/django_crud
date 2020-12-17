@@ -36,3 +36,27 @@ def delete_project(request, template_name='pages/main_page.html'):
 
 def update_project(request, template_name='pages/main_page.html'):
     return render(request, template_name)
+
+
+def work(request, template_name='pages/main_page.html'):
+    return render(request, template_name)
+
+
+def mobile(request, template_name='pages/main_page.html'):
+    return render(request, template_name)
+
+
+def web(request, template_name='pages/main_page.html'):
+    return render(request, template_name)
+
+
+def awards(request, template_name='pages/main_page.html'):
+    return render(request, template_name)
+
+
+def about(request, template_name='pages/main_page.html'):
+    return render(request, template_name)
+
+
+def contact(request, template_name='pages/main_page.html'):
+    return render(request, template_name)

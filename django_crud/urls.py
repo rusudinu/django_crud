@@ -11,6 +11,12 @@ urlpatterns = [
     path('update/<int:project_id>/', views.update_project),  # update a project
     path('delete/', views.delete_project),  # delete a project
     path('delete/<int:project_id>/', views.delete_project),  # delete a project
+    path('work/', views.work),  # showcase of the projects
+    path('mobile/', views.mobile),  # showcase of the mobile projects
+    path('web/', views.web),  # showcase of the web projects
+    path('awards/', views.awards),  # showcase of the awards
+    path('about/', views.about),  # about page
+    path('contact/', views.contact),  # contact page
     path('admin/', admin.site.urls),
     path('test_404/', views.error_404),
     path('test_403/', views.error_403),
