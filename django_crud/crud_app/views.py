@@ -38,25 +38,25 @@ def update_project(request, template_name='pages/main_page.html'):
     return render(request, template_name)
 
 
-def work(request, template_name='pages/main_page.html'):
+def work(request, template_name='pages/work.html'):
     return render(request, template_name)
 
 
-def mobile(request, template_name='pages/main_page.html'):
+def mobile(request, template_name='pages/mobile.html'):
     return render(request, template_name)
 
 
-def web(request, template_name='pages/main_page.html'):
+def web(request, template_name='pages/web.html'):
     return render(request, template_name)
 
 
-def awards(request, template_name='pages/main_page.html'):
+def awards(request, template_name='pages/awards.html'):
     return render(request, template_name)
 
 
-def about(request, template_name='pages/main_page.html'):
+def about(request, template_name='pages/about.html'):
     return render(request, template_name)
 
 
-def contact(request, template_name='pages/main_page.html'):
+def contact(request, template_name='pages/contact.html'):
     return render(request, template_name)
