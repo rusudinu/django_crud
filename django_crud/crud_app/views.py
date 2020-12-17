@@ -28,19 +28,35 @@ def main_page(request, template_name='pages/main_page.html'):
 
 
 def new_project(request, template_name='pages/main_page.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/new?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def display_project(request, template_name='pages/main_page.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/project?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def delete_project(request, template_name='pages/main_page.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/delete?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def update_project(request, template_name='pages/main_page.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/update?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def work(request, template_name='pages/work.html'):
@@ -68,12 +84,24 @@ def web(request, template_name='pages/web.html'):
 
 
 def awards(request, template_name='pages/awards.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/awards?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def about(request, template_name='pages/about.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/about?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
 
 
 def contact(request, template_name='pages/contact.html'):
-    return render(request, template_name)
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/contact?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
