@@ -5,27 +5,27 @@
          class="primary-navigation">
         <ul>
             <li>
-                <a href="/" class="active">Home</a>
+                <a href="/?sid={{ session_id }}" class="active">Home</a>
             </li>
             <li>
-                <a href="/work">Work &dtrif;</a>
+                <a href="/work?sid={{ session_id }}">Work &dtrif;</a>
                 <ul class="dropdown">
                     <li>
-                        <a href="/mobile">Mobile Development</a>
+                        <a href="/mobile?sid={{ session_id }}">Mobile Development</a>
                     </li>
                     <li>
-                        <a href="/web">Web Development</a>
+                        <a href="/web?sid={{ session_id }}">Web Development</a>
                     </li>
                 </ul>
             </li>
             <li>
-                <a href="/awards">Honors & Awards</a>
+                <a href="/awards?sid={{ session_id }}">Honors & Awards</a>
             </li>
             <li>
-                <a href="/about">About & Mentions</a>
+                <a href="/about?sid={{ session_id }}">About & Mentions</a>
             </li>
             <li>
-                <a href="/contact">Contact</a>
+                <a href="/contact?sid={{ session_id }}">Contact</a>
             </li>
             <li>
                 <a href="https://github.com/DDDECAR/django_crud" target="_blank">Source Code</a>
@@ -42,6 +42,6 @@
             <a href="https://www.python.org/" target="_blank">PYTHON</a>
             <a href="https://www.djangoproject.com/" target="_blank">[ + DJANGO ].</a> You can visit different pages of the website using the menu placed on the top of the screen.</p>
         <p>If you would like to interact with the website, you can use those links: <a href="">CREATE</a>, <a href="">READ</a>, <a href="">UPDATE</a>, <a href="">DELETE</a>. The links will redirect you to a page where you can interact with the SQL database.</p>
-        <p>Each user has a custom session ID, so that the database can have custom entries. Your session custom id is: {{ session_id }}.</p>
+        <p>Each user has a custom session ID, so that the database can have custom entries. Your session custom id is: {{ session_id }}. You can copy this ID and use it later, your changes will persist in the database, make sure to pass it as a parameter, or you can just copy the current url and paste it later in the browser.<br>The current url is: {{ request.build_absolute_uri }}</p>
     </section>
 {% endblock %}
