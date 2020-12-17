@@ -3,19 +3,72 @@
 
     <nav role="navigation" class="primary-navigation">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/work">Work &dtrif;</a>
+            <li>
+                <a href="/?sid={{ session_id }}">Home</a>
+            </li>
+            <li>
+                <a href="/work?sid={{ session_id }}">Work &dtrif;</a>
                 <ul class="dropdown">
-                    <li><a href="/mobile">Mobile Development</a></li>
-                    <li><a href="/web">Web Development</a></li>
+                    <li>
+                        <a href="/mobile?sid={{ session_id }}">Mobile Development</a>
+                    </li>
+                    <li>
+                        <a href="/web?sid={{ session_id }}">Web Development</a>
+                    </li>
                 </ul>
             </li>
-            <li><a href="/awards" class="active">Honors & Awards</a></li>
-            <li><a href="/about">About & Mentions</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="https://github.com/DDDECAR/django_crud" target="_blank">Source Code</a></li>
+            <li>
+                <a href="/awards?sid={{ session_id }}" class="active">Honors & Awards</a>
+            </li>
+            <li>
+                <a href="/about?sid={{ session_id }}">About & Mentions</a>
+            </li>
+            <li>
+                <a href="/contact?sid={{ session_id }}">Contact</a>
+            </li>
+            <li>
+                <a href="https://github.com/DDDECAR/django_crud" target="_blank">Source Code</a>
+            </li>
         </ul>
     </nav>
-    <h1>main page</h1>
+    <hr/>
+    <section class="main-section">
+        <p>
+            This section showcases the Honors and Awards won by the apps that were already present on the website, ordered by their number of awards.
+            <br>
+            Please note that: Some apps were not designed for international use and may only be available in romanian.
+            <br>
+            If you intend to use one of the apps shown below, please make sure to read the <a href="https://codingshadows.com/privacy-policy" target="_blank">Privacy Policy</a>.
+            <br>
+            Some apps may not be available to the general public.
+        </p>
+        <br/>
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.driversdata" target="_blank">Drivers Data : Virtual logbook for drivers</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ INTERNATIONAL ] [ AVAILABLE ]</h4>
+        <hr/>
+        <p style="max-width: 600px; padding-bottom: 80px">
+            <a href="https://stirileprotv.ro/stiri/ilikeit/ilikeit-aplicatia-care-ajuta-soferii-sa-economiseasca-sute-de-ore-de-munca.html" target="_blank">Showcased at ILikeIT</a>
+            <br>
+            <a href="https://infoeducatie.ro/rezultate" target="_blank">Placed 2nd at "Infoeducatie" National Contest, 27th edition [ "Utilitar" ]</a>
+            <br>
+            <a href="https://infoeducatie.ro/rezultate" target="_blank">Placed 3rd, 2nd prize at "Infoeducatie" Online Contest, 28th edition [ "Utilitar" ]</a>
+        </p>
+
+
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.romana_bac_v2" target="_blank">Româna pentru BAC</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ ROMANIA ONLY ] [ AVAILABLE ]</h4>
+        <hr/>
+        <p style="max-width: 600px; padding-bottom: 80px">
+            Top 5 trending educational apps on the Google Play store in November 2020
+        </p>
+
+
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.focustimekeeper" target="_blank">Focus: Time Keeper</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ INTERNATIONAL ] [ UNPUBLISHED ]</h4>
+        <hr/>
+        <p style="max-width: 600px; padding-bottom: 80px">
+            <a href="https://infoeducatie.ro/rezultate" target="_blank">Placed in top 10% at "Infoeducatie" National Contest, 26th edition [ "Utilitar" ]</a>
+        </p>
+    </section>
 
 {% endblock %}
