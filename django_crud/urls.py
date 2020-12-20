@@ -13,7 +13,6 @@ urlpatterns = [
     path('web/', views.web),  # showcase of the web projects
     path('awards/', views.awards),  # showcase of the awards
     path('about/', views.about),  # about page
-    path('contact/', views.contact),  # contact page
     path('admin/', admin.site.urls),
     path('test_404/', views.error_404),
     path('test_403/', views.error_403),
