@@ -23,9 +23,10 @@
             <li>
                 <a href="/about?sid={{ session_id }}">About & Mentions</a>
             </li>
-            <li>
-                <a href="/contact?sid={{ session_id }}">Contact</a>
-            </li>
+            <li><a href="/create?sid={{ session_id }}">C</a></li>
+            <li><a href="/read?sid={{ session_id }}">R</a></li>
+            <li><a href="/update?sid={{ session_id }}">U</a></li>
+            <li><a href="/delete?sid={{ session_id }}">D</a></li>
             <li>
                 <a href="https://github.com/DDDECAR/django_crud" target="_blank">Source Code</a>
             </li>
@@ -40,6 +41,7 @@
             <a href="https://en.wikipedia.org/wiki/CSS" target="_blank">CSS</a> and
             <a href="https://www.python.org/" target="_blank">PYTHON</a>
             <a href="https://www.djangoproject.com/" target="_blank">[ + DJANGO ].</a> You can visit different pages of the website using the menu placed on the top of the page.</p>
-        <p>If you would like to interact with the website, you can use those links: <a href="">CREATE</a>, <a href="">READ</a>, <a href="">UPDATE</a>, <a href="">DELETE</a>. The links will redirect you to a page where you can interact with the SQL database.</p>
+        <p>If you would like to interact with the website, you can use those links: <a href="/create?sid={{ session_id }}">CREATE</a>, <a href="/read?sid={{ session_id }}">READ</a>, <a href="/update?sid={{ session_id }}">UPDATE</a> and <a href="/delete?sid={{ session_id }}">DELETE</a>. The links will redirect you to a page where you can interact with the SQL database.</p>
+        <p>CRUD stands for <a href="/create?sid={{ session_id }}">CREATE</a>, <a href="/read?sid={{ session_id }}">READ</a>, <a href="/update?sid={{ session_id }}">UPDATE</a> and <a href="/delete?sid={{ session_id }}">DELETE</a> hence the buttons in the menu [ <a href="/create?sid={{ session_id }}">C</a> | <a href="/read?sid={{ session_id }}">R</a> | <a href="/update?sid={{ session_id }}">U</a> | <a href="/delete?sid={{ session_id }}">D</a> ].</p>
     </section>
 {% endblock %}

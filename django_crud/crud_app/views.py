@@ -59,19 +59,35 @@ def display_project(request, template_name='pages/main_page.html'):
     return render(request, template_name, {'session_id': session_id})
 
 
-def delete_project(request, template_name='pages/main_page.html'):
+def create(request, template_name='pages/create.html'):
     session_id = request.GET.get('sid', '')
     if session_id == '':
         session_id = uuid.uuid4().hex
-        return redirect('/delete?sid=' + session_id)
+        return redirect('/about?sid=' + session_id)
     return render(request, template_name, {'session_id': session_id})
 
 
-def update_project(request, template_name='pages/main_page.html'):
+def read(request, template_name='pages/read.html'):
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/about?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
+
+
+def update(request, template_name='pages/update.html'):
     session_id = request.GET.get('sid', '')
     if session_id == '':
         session_id = uuid.uuid4().hex
         return redirect('/update?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
+
+
+def delete(request, template_name='pages/delete.html'):
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/delete?sid=' + session_id)
     return render(request, template_name, {'session_id': session_id})
 
 
@@ -112,12 +128,4 @@ def about(request, template_name='pages/about.html'):
     if session_id == '':
         session_id = uuid.uuid4().hex
         return redirect('/about?sid=' + session_id)
-    return render(request, template_name, {'session_id': session_id})
-
-
-def contact(request, template_name='pages/contact.html'):
-    session_id = request.GET.get('sid', '')
-    if session_id == '':
-        session_id = uuid.uuid4().hex
-        return redirect('/contact?sid=' + session_id)
     return render(request, template_name, {'session_id': session_id})
