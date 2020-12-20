@@ -2,6 +2,14 @@ from django.shortcuts import render, redirect, get_object_or_404
 import uuid
 from django.forms import ModelForm
 
+from .models import Project
+
+
+class ProjectForm(ModelForm):
+    class Meta:
+        model = Project
+        fields = ['name', 'storeUrl', 'description']
+
 
 def error_404(request, template_name='error_pages/404.html'):
     session_id = request.GET.get('sid', '')
