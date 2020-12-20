@@ -32,6 +32,12 @@
             </li>
         </ul>
     </nav>
-    <h1>main page</h1>
+    <hr/>
+    <section class="main-section" style="text-align: center">
+        <form method="post">{% csrf_token %}
+            Are you sure you want to delete "{{ object }}" ?<br/>
+            <input type="submit" value="Delete"/>
+        </form>
+    </section>
 
 {% endblock %}

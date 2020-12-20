@@ -32,9 +32,12 @@
             </li>
         </ul>
     </nav>
-    <form method="post">{% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Submit"/>
-    </form>
+    <hr/>
+    <section class="main-section" style="text-align: center">
+        <form method="post" style="display: inline-block">{% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit"/>
+        </form>
+    </section>
 
 {% endblock %}

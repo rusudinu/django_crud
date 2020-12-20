@@ -110,10 +110,27 @@ def update(request, template_name='pages/update.html'):
 
 def delete(request, template_name='pages/delete.html'):
     session_id = request.GET.get('sid', '')
-    if session_id == '':
-        session_id = uuid.uuid4().hex
-        return redirect('/delete?sid=' + session_id)
-    return render(request, template_name, {'session_id': session_id})
+    project_id = request.GET.get('pid', '')
+    session_project_id = request.GET.get('spid', '')
+
+    if session_project_id != '':
+        # project = get_object_or_404(Project, spid=session_project_id)
+        project = Project.objects.get(spid=session_project_id)  # get_object_or_404(Project, spid=session_project_id)
+    elif session_id != '' and project_id != '':
+        spid = session_id + '_' + project_id
+        project = get_object_or_404(Project, spid=session_project_id)
+    else:
+        return redirect('/?sid=' + session_id)
+
+    # if session_id == '':
+    #     session_id = uuid.uuid4().hex
+    #     return redirect('/delete?sid=' + session_id)
+
+    if request.method == 'POST':
+        project.delete()
+        return redirect('/?sid=' + session_id)  # redirect to a page that says deleted successfully
+
+    return render(request, template_name, {'session_id': session_id, 'object': project})
 
 
 def work(request, template_name='pages/work.html'):
