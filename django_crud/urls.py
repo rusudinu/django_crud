@@ -8,6 +8,8 @@ urlpatterns = [
     path('project/', views.display_project),  # display the page of a project
     path('update/', views.update_project),  # update a project
     path('delete/', views.delete_project),  # delete a project
+    path('create/', views.create),  # create a project
+    path('read/', views.read),  # read a project
     path('work/', views.work),  # showcase of the projects
     path('mobile/', views.mobile),  # showcase of the mobile projects
     path('web/', views.web),  # showcase of the web projects

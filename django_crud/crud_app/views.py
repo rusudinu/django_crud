@@ -113,3 +113,19 @@ def about(request, template_name='pages/about.html'):
         session_id = uuid.uuid4().hex
         return redirect('/about?sid=' + session_id)
     return render(request, template_name, {'session_id': session_id})
+
+
+def create(request, template_name='pages/about.html'):
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/about?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
+
+
+def read(request, template_name='pages/about.html'):
+    session_id = request.GET.get('sid', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/about?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id})
