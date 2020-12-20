@@ -35,7 +35,7 @@ def error_500(request, template_name='error_pages/500.html'):
     return render(request, template_name, {'session_id': session_id})
 
 
-def main_page(request, template_name='pages/main_page.html'):
+def main_page(request, template_name='pages/main.html'):
     session_id = request.GET.get('sid', '')
     if session_id == '':
         session_id = uuid.uuid4().hex
@@ -43,7 +43,7 @@ def main_page(request, template_name='pages/main_page.html'):
     return render(request, template_name, {'session_id': session_id})
 
 
-def new_project(request, template_name='pages/main_page.html'):
+def new_project(request, template_name='pages/main.html'):
     session_id = request.GET.get('sid', '')
     if session_id == '':
         session_id = uuid.uuid4().hex
@@ -51,7 +51,7 @@ def new_project(request, template_name='pages/main_page.html'):
     return render(request, template_name, {'session_id': session_id})
 
 
-def display_project(request, template_name='pages/main_page.html'):
+def display_project(request, template_name='pages/main.html'):
     session_id = request.GET.get('sid', '')
     if session_id == '':
         session_id = uuid.uuid4().hex
