@@ -71,15 +71,32 @@ def create(request, template_name='pages/create.html'):
     session_id = request.GET.get('sid', '')
     if session_id == '':
         session_id = uuid.uuid4().hex
-        return redirect('/about?sid=' + session_id)
-    return render(request, template_name, {'session_id': session_id})
+        return redirect('/create?sid=' + session_id)
+    form = ProjectForm(request.POST or None)
+    if form.is_valid():
+        project_id = uuid.uuid4().hex
+        project = form.save(commit=False)
+        # project.user = request.user
+        project.sid = session_id
+        project.pid = project_id
+        project.spid = session_id + '_' + project_id
+        # project.name = request.name
+        # project.description = request.description
+        project.save()
+        return redirect('/create?sid=' + session_id)
+    # return render(request, template_name, {'form': form})
+    return render(request, template_name, {'session_id': session_id, 'form': form})
 
 
 def read(request, template_name='pages/read.html'):
     session_id = request.GET.get('sid', '')
-    if session_id == '':
+    project_id = request.GET.get('pid', '')
+    session_project_id = request.GET.get('spid', '')
+    if session_id == '' and session_project_id == '':
         session_id = uuid.uuid4().hex
-        return redirect('/about?sid=' + session_id)
+        return redirect('/read?sid=' + session_id)
+    if project_id == '' and session_project_id == '':
+        return redirect('/?sid=' + session_id)  # no project ID [ aka PID ] has been entered, maybe redirect to the projects list
     return render(request, template_name, {'session_id': session_id})
 
 
