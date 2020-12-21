@@ -92,12 +92,16 @@ def read(request, template_name='pages/read.html'):
     session_id = request.GET.get('sid', '')
     project_id = request.GET.get('pid', '')
     session_project_id = request.GET.get('spid', '')
-    if session_id == '' and session_project_id == '':
-        session_id = uuid.uuid4().hex
-        return redirect('/read?sid=' + session_id)
-    if project_id == '' and session_project_id == '':
-        return redirect('/?sid=' + session_id)  # no project ID [ aka PID ] has been entered, maybe redirect to the projects list
-    return render(request, template_name, {'session_id': session_id})
+
+    if session_id != '':
+        # project = get_object_or_404(Project, spid=session_project_id)
+        project = Project.objects.filter(sid=session_id)
+    else:
+        return redirect('/?sid=' + session_id)
+    data = {}
+    data['object_list'] = project
+    data['session_id'] = session_id
+    return render(request, template_name, data)
 
 
 def update(request, template_name='pages/update.html'):

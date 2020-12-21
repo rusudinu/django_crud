@@ -32,6 +32,11 @@
             </li>
         </ul>
     </nav>
-    <h1>main page</h1>
+    {% for project in object_list %}
+        <li>{{ project.name }} ({{ project.description }} Pages)
+            <a href="/update?sid={{ session_id }}&spid={{ project.spid }}">edit</a>
+            <a href="/delete?sid={{ session_id }}&spid={{ project.spid }}">delete</a>
+        </li>
+    {% endfor %}
 
 {% endblock %}
