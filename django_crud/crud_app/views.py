@@ -106,10 +106,22 @@ def read(request, template_name='pages/read.html'):
 
 def update(request, template_name='pages/update.html'):
     session_id = request.GET.get('sid', '')
-    if session_id == '':
-        session_id = uuid.uuid4().hex
-        return redirect('/update?sid=' + session_id)
-    return render(request, template_name, {'session_id': session_id})
+    project_id = request.GET.get('pid', '')
+    session_project_id = request.GET.get('spid', '')
+
+    if session_project_id != '':
+        # project = get_object_or_404(Project, spid=session_project_id)
+        project = Project.objects.get(spid=session_project_id)  # get_object_or_404(Project, spid=session_project_id)
+    elif session_id != '' and project_id != '':
+        spid = session_id + '_' + project_id
+        project = get_object_or_404(Project, spid=session_project_id)
+    else:
+        return redirect('/?sid=' + session_id)
+    form = ProjectForm(request.POST or None, instance=project)
+    if form.is_valid():
+        form.save()
+        return redirect('/read?sid=' + session_id)
+    return render(request, template_name, {'session_id': session_id, 'form': form})
 
 
 def delete(request, template_name='pages/delete.html'):
