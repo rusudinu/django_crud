@@ -3,7 +3,7 @@
 # ❓ Project Description
 
 This is a simple CRUD app, that displays all the projects that I made in the past, and allows me to add, delete and
-update the projects in the database.
+update the projects in the database. You should be able to play with the app at: https://rusu.dev.codingshadows.com
 
 # 📋 Technical documentation
 
@@ -11,9 +11,12 @@ update the projects in the database.
 
 * Python
 * Django
-* SQLITE3
+* SQlite3
+* Docker
+* Nginx
+* Kubernetes
 
-## To run the app, create a Docker container 
+# ▶️ Running the app
 ### On Linux: 
 * install docker: 
   1 Update the apt package index and install packages to allow apt to use a repository over HTTPS:
