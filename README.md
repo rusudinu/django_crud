@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, welcome to a CRUD Projects app, written in Python [ +Django ], created by Rusu Dinu Ștefan, also known as DDDECAR</h1>
+<h1 align="center">Hi 👋, welcome to a CRUD Projects app, written in Python, created by Rusu Dinu Ștefan</h1>
 
 # ❓ Project Description
 
