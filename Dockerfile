@@ -16,4 +16,7 @@ RUN python manage.py makemigrations
 
 RUN python manage.py migrate --run-syncdb
 
-RUN python manage.py runserver
+EXPOSE 8000
+
+ENTRYPOINT python manage.py runserver
+# RUN python manage.py runserver

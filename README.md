@@ -12,3 +12,8 @@ update the projects in the database.
 * Python
 * Django
 * SQLITE3
+
+## To run the app, create a Docker container 
+On Linux: sudo docker build . [ in the project root directory ]
+You should get a message like: Successfully built <CONTAINER_ID>
+Then, run sudo docker run -p 8000:8000 <CONTAINER_ID>
