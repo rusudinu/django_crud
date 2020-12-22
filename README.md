@@ -39,13 +39,14 @@ update the projects in the database. You should be able to play with the app at:
 * Creating the Docker image:
   1 Use a pre-built Docker image:
     1.1 The image will be pulled from: https://hub.docker.com/r/codingshadows/python_django_crud
-    1.2 sudo docker create --name <CONTAINER_NAME> -p <HOST_ENTRY_PORT>:8000 codingshadows/python_django_crud:latest
-    1.3 sudo docker run -p 8000:8000 <CONTAINER_NAME>
+    1.2 sudo docker run -p <HOST_PORT>:8000 codingshadows/python_django_crud:latest
   2 Or create your own image from the source code:
     2.1 cd into the project root directory
     2.2 sudo docker build .
     2.3 You should get a message like: Successfully built <CONTAINER_ID>
-    2.4 sudo docker run -p 8000:8000 <CONTAINER_ID>
+    2.4 sudo docker run -p <HOST_PORT>:8000 <CONTAINER_ID>
+    
+<HOST_PORT> can be any open and available port number. You will use it to connect to the website locally, by entering localhost:<HOST_PORT> in the browser.
 
 ### On Windows:
 * read https://docs.docker.com/docker-for-windows/
