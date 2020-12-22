@@ -14,6 +14,7 @@ update the projects in the database. You should be able to play with the app at:
 * SQlite3
 * Docker
 * Nginx
+* Gunicorn
 * Kubernetes
 
 # ▶️ Running the app
