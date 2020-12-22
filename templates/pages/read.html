@@ -32,10 +32,20 @@
             </li>
         </ul>
     </nav>
+    <hr>
     {% for project in object_list %}
-        <li>{{ project.name }} ({{ project.description }} Pages)
-            <a href="/update?sid={{ session_id }}&spid={{ project.spid }}">edit</a>
-            <a href="/delete?sid={{ session_id }}&spid={{ project.spid }}">delete</a>
+        <section class="main-section">
+            <h1 style="text-align: center"><a href="{{ project.storeUrl }}" target="_blank" rel="noopener">{{ project.name }}</a></h1>
+            <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ INTERNATIONAL ] [ AVAILABLE ]</h4>
+            <hr/>
+            <p style="max-width: 600px; padding-bottom: 20px">
+                {{ project.description }}
+            </p>
+            <p style="text-align: center; padding-bottom: 40px">
+                <a href="/update?sid={{ session_id }}&spid={{ project.spid }}">EDIT </a>|
+                <a href="/delete?sid={{ session_id }}&spid={{ project.spid }}"> DELETE</a>
+            </p>
+        </section>
         </li>
     {% endfor %}
 
