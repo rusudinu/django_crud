@@ -8,11 +8,13 @@ This is a simple CRUD app, that displays all the projects that I made in the pas
 
 ## 🧰 Frameworks / Tools used
 
-* Python
 * Django
-* SQlite3
 * Docker
 * Gunicorn
+* Nginx
+* Python
+* SQlite3
+
 
 # ▶️ Running the app
 
