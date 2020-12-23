@@ -2,13 +2,13 @@
 
 # Project Description
 
-This is a simple CRUD app, that displays all the projects that I made in the past, and allows me to add, delete and update the projects in the database. You should be able to play with the app at: https://rusu.rip.wtf [with SSL] or http://rusu.dev.codingshadows.com [no SSL]. If you want to see the heavier version of this website, you can check https://codingshadows.com
+This is a simple CRUD app, that displays all the projects that I made in the past, and allows me to add, delete and update the projects in the database. You should be able to play with the app at: https://rusu.rip.wtf [ with SSL ] or http://rusu.dev.codingshadows.com [ no SSL ]. If you want to see the heavier version of this website, you can check https://codingshadows.com
 
 # User documentation
 
 ### Introduction
 
-One can navigate the website using the buttons in the menu bar placed at the top of the page. There are 8 main sections of the website, some that are dynamically generated, and some that are static webpages. The static sections are: Home, Work ( Mobile & Web Development), Honors & Awards, About & Mentions, C ( Create ). The dynamic pages are R ( Read ), U ( Update ), D ( Delete ). Source Code redirects the user to the github page. One can view real projects in the Work ( and subsections of
+One can navigate the website using the buttons in the menu bar placed at the top of the page. There are 8 main sections of the website, some that are dynamically generated, and some that are static webpages. The static sections are: Home, Work ( Mobile & Web Development ), Honors & Awards, About & Mentions, C ( Create ). The dynamic pages are R ( Read ), U ( Update ), D ( Delete ). Source Code redirects the user to the github page. One can view real projects in the Work ( and subsections of
 Work ) and in Honors & Awards. C R U D pages are for dynamic operations on projects ( explained in [CRUD Ops](#crud-ops)).
 
 ### CRUD Ops
