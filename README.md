@@ -2,7 +2,7 @@
 
 # ❓ Project Description
 
-This is a simple CRUD app, that displays all the projects that I made in the past, and allows me to add, delete and update the projects in the database. You should be able to play with the app at: https://rusu.dev.codingshadows.com
+This is a simple CRUD app, that displays all the projects that I made in the past, and allows me to add, delete and update the projects in the database. You should be able to play with the app at: https://rusu.rip.wtf [with SSL] or http://rusu.dev.codingshadows.com [no SSL]. If you want to see the heavier version of this website, you can check https://codingshadows.com
 
 # 📋 Technical documentation
 
