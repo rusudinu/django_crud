@@ -7,7 +7,7 @@
                 <a href="/?sid={{ session_id }}">Home</a>
             </li>
             <li>
-                <a href="/work?sid={{ session_id }}">Work &dtrif;</a>
+                <a href="/work?sid={{ session_id }}" class="active">Work &dtrif;</a>
                 <ul class="dropdown">
                     <li>
                         <a href="/mobile?sid={{ session_id }}">Mobile Development</a>
@@ -32,6 +32,24 @@
             </li>
         </ul>
     </nav>
-    <h1>main page</h1>
+    <hr/>
+    <section class="main-section">
+        <p>
+            This section showcases all the web projects. You can check the <a href="/mobile?sid={{ session_id }}" rel="noopener">mobile</a> projects <a href="/mobile?sid={{ session_id }}" rel="noopener">here</a>.
+            <br>
+            You can check other projects on <a href="https://codingshadows.com" target="_blank" rel="noopener">codingshadows.com</a>
+            <br>
+            Please note that: Some apps were not designed for international use and may only be available in romanian.
+            <br>
+            If you intend to use one of the apps shown below, please make sure to read the <a href="https://codingshadows.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.
+            <br>
+            Some apps may not be available to the general public.
+        </p>
+        <br/>
+        <h1 style="text-align: center"><a href="" target="_blank" rel="noopener">VIANU MUN</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ INTERNATIONAL ] [ UNPUBLISHED ] [ WEB ]</h4>
+        <hr/>
+        <p style="max-width: 800px; padding-bottom: 80px">Thie website was created for the MUN that was held (in 2019) at my High School. Model United Nations (MUN) is a simulation of the proceedings of the United Nations. Participants, referred to as Delegates, are assigned a country to represent in one of the UN’s numerous committees with pre-set topics to debate.</p>
+    </section>
 
 {% endblock %}
