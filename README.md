@@ -47,7 +47,7 @@ Listed alphabetically. Motivation is written in ( motivation ).
 
 # Running your own session ( hosting the app )
 
-### On Linux ( Ubuntu ):
+### On Ubuntu
 
 * Install Docker ( you may read https://docs.docker.com/engine/install/ubuntu/ for more details ):   
   1 Update the apt package index and install packages to allow apt to use a repository over HTTPS:  
@@ -137,7 +137,7 @@ Listed alphabetically. Motivation is written in ( motivation ).
   &nbsp;&nbsp;&nbsp;&nbsp;2.3 You should get a message like: Successfully built <CONTAINER_ID>  
   &nbsp;&nbsp;&nbsp;&nbsp;2.4 sudo docker run -p <HOST_PORT>:8000 <CONTAINER_ID>
 
-### On Windows:
+### On Windows
 
 * Install Docker ( you may read https://docs.docker.com/docker-for-windows/ )
 * Creating the Docker image ( choose either 1 or 2, do NOT do them both ):  
