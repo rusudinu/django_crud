@@ -3,19 +3,90 @@
 
     <nav role="navigation" class="primary-navigation">
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/work" class="active">Work &dtrif;</a>
+            <li>
+                <a href="/?sid={{ session_id }}">Home</a>
+            </li>
+            <li>
+                <a href="/work?sid={{ session_id }}" class="active">Work &dtrif;</a>
                 <ul class="dropdown">
-                    <li><a href="/mobile">Mobile Development</a></li>
-                    <li><a href="/web">Web Development</a></li>
+                    <li>
+                        <a href="/mobile?sid={{ session_id }}">Mobile Development</a>
+                    </li>
+                    <li>
+                        <a href="/web?sid={{ session_id }}">Web Development</a>
+                    </li>
                 </ul>
             </li>
-            <li><a href="/awards">Honors & Awards</a></li>
-            <li><a href="/about">About & Mentions</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="https://github.com/DDDECAR/django_crud" target="_blank" rel="noopener">Source Code</a></li>
+            <li>
+                <a href="/awards?sid={{ session_id }}">Honors & Awards</a>
+            </li>
+            <li>
+                <a href="/about?sid={{ session_id }}">About & Mentions</a>
+            </li>
+            <li><a href="/create?sid={{ session_id }}">C</a></li>
+            <li><a href="/read?sid={{ session_id }}">R</a></li>
+            <li><a href="/update?sid={{ session_id }}">U</a></li>
+            <li><a href="/delete?sid={{ session_id }}">D</a></li>
+            <li>
+                <a href="https://github.com/DDDECAR/django_crud" target="_blank" rel="noopener">Source Code</a>
+            </li>
         </ul>
     </nav>
-    <h1>main page</h1>
+    <hr/>
+    <section class="main-section">
+        <p>
+            This section showcases all the projects.
+            <br>
+            You can check other projects on <a href="https://codingshadows.com" target="_blank" rel="noopener">codingshadows.com</a>
+            <br>
+            Please note that: Some apps were not designed for international use and may only be available in romanian.
+            <br>
+            If you intend to use one of the apps shown below, please make sure to read the <a href="https://codingshadows.com/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>.
+            <br>
+            Some apps may not be available to the general public.
+        </p>
+        <br/>
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.driversdata" target="_blank" rel="noopener">DRIVERS DATA (+PRO): VIRTUAL LOGBOOK FOR DRIVERS</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ INTERNATIONAL ] [ AVAILABLE ] [ ANDROID ]</h4>
+        <hr/>
+        <p style="max-width: 800px; padding-bottom: 80px">Drivers Data is an app coded in Java 8 for the Android platform, the main goal of this app being to create a virtual roadmap for all the drivers.Each user can get a report based on the entered data, where he can see a lot of parameters about his work days.Showcased at ILikeIT on Oct. 23, 2019. (ILikeIT is a show on PRO TV, the most popular TV station in Romania) Launched on Apr 28, 2019. Constant updates are released, to fulfill the user
+            feature requests.</p>
+
+
+        <br/>
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.mygoal" target="_blank" rel="noopener">MYGOAL: EXPENSES ASSISTANT AND MONEY RAISER</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ INTERNATIONAL ] [ AVAILABLE ] [ ANDROID ]</h4>
+        <hr/>
+        <p style="max-width: 800px; padding-bottom: 80px">This app aims at helping the user to raise a desired amount of money in the shortest timeframe possible. The user can enter the amount he wants to save, the amount he already havs and the amount he earns every month, to get an insight on how fast he'll be able to make his dream reality. Launched on Nov 26, 2019.</p>
+
+
+        <br/>
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.whistscoretable" target="_blank" rel="noopener">WHIST: SCORE TABLE</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ ROMANIA ONLY ] [ AVAILABLE ] [ ANDROID ]</h4>
+        <hr/>
+        <p style="max-width: 800px; padding-bottom: 80px">This app helps the user track the score for the Whist game. It is intuitive and easy to use. No setup or account needed. All Whist game modes are supported. Online and Offline modes. Launched on Dec 15, 2019.</p>
+
+
+        <br/>
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.rubrika" target="_blank" rel="noopener">RUBRIKA (ANDROID)</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ ROMANIA ONLY ] [ AVAILABLE ] [ ANDROID ]</h4>
+        <hr/>
+        <p style="max-width: 800px; padding-bottom: 80px">This app helps the user track the score for the Whist game. It is intuitive and easy to use. No setup or account needed. All Whist game modes are supported. Online and Offline modes. Launched on Dec 15, 2019.</p>
+
+
+        <br/>
+        <h1 style="text-align: center"><a href="" target="_blank" rel="noopener">VIANU MUN</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ INTERNATIONAL ] [ UNPUBLISHED ] [ WEB ]</h4>
+        <hr/>
+        <p style="max-width: 800px; padding-bottom: 80px">Thie website was created for the MUN that was held (in 2019) at my High School. Model United Nations (MUN) is a simulation of the proceedings of the United Nations. Participants, referred to as Delegates, are assigned a country to represent in one of the UN’s numerous committees with pre-set topics to debate.</p>
+
+
+        <br/>
+        <h1 style="text-align: center"><a href="https://play.google.com/store/apps/details?id=com.codingshadows.guessthesong" target="_blank" rel="noopener">GHICESTE PIESA</a></h1>
+        <h4 style="text-align: center; color: #cccccc; font-weight: lighter;">[ ROMANIA ONLY ] [ AVAILABLE ] [ ANDROID ]</h4>
+        <hr/>
+        <p style="max-width: 800px; padding-bottom: 80px">This app is made for the romanian audience that listens to music. As of today, three flavors of this app exist: Ghicește Piesa, Ghicește Piesa - Piese de la AC/DC and Ghicește Piesa - Piese de la Metallica. The user gets the lyrics of a song in romanian and he has to guess the song title. Launched on March 08, 2020.</p>
+
+    </section>
 
 {% endblock %}
