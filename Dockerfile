@@ -20,5 +20,5 @@ EXPOSE 8000
 
 # ENTRYPOINT export DJANGO_DEBUG=False
 # ENTRYPOINT python manage.py runserver 0.0.0.0:8000
-ENTRYPOINT gunicorn --workers=8 --threads=2 main:app
+ENTRYPOINT gunicorn --workers=8 --threads=2 main:crud_app
 # RUN python manage.py runserver
