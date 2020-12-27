@@ -16,8 +16,8 @@ ERRN = {
 }
 
 # error description
-ERRCD = {"ERRC_0": "description of err_p_0",
-         "ERRC_1": "description of err_p_1"
+ERRCD = {"ERRC_0": "You may not edit a project without a valid project id.",
+         "ERRC_1": "You may not delete a project without a valid project id."
          }
 
 
