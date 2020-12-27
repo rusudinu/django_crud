@@ -4,6 +4,22 @@ from django.forms import ModelForm
 
 from .models import Project
 
+# error code
+ERRC = {"ERRC_0": "ERRC_0",
+        "ERRC_1": "ERRC_1"
+        }
+
+# error name
+ERRN = {
+    "ERRC_0": "ERRC_0",
+    "ERRC_1": "ERRC_1"
+}
+
+# error description
+ERRCD = {"ERRC_0": "description of err_p_0",
+         "ERRC_1": "description of err_p_1"
+         }
+
 
 class ProjectForm(ModelForm):
     class Meta:
@@ -116,7 +132,7 @@ def update(request, template_name='pages/update.html'):
         spid = session_id + '_' + project_id
         project = get_object_or_404(Project, spid=session_project_id)
     else:
-        return redirect('/?sid=' + session_id)
+        return redirect('/err/?sid=' + session_id + '&errc=' + ERRC['ERRC_0'])
     form = ProjectForm(request.POST or None, instance=project)
     if form.is_valid():
         form.save()
@@ -136,11 +152,7 @@ def delete(request, template_name='pages/delete.html'):
         spid = session_id + '_' + project_id
         project = get_object_or_404(Project, spid=session_project_id)
     else:
-        return redirect('/?sid=' + session_id)
-
-    # if session_id == '':
-    #     session_id = uuid.uuid4().hex
-    #     return redirect('/delete?sid=' + session_id)
+        return redirect('/err/?sid=' + session_id + '&errc=' + ERRC['ERRC_1'])
 
     if request.method == 'POST':
         project.delete()
@@ -187,3 +199,14 @@ def about(request, template_name='pages/about.html'):
         session_id = uuid.uuid4().hex
         return redirect('/about?sid=' + session_id)
     return render(request, template_name, {'session_id': session_id})
+
+
+def err(request, template_name='pages/custom_error.html'):
+    session_id = request.GET.get('sid', '')
+    error_code = request.GET.get('errc', '')
+    if session_id == '':
+        session_id = uuid.uuid4().hex
+        return redirect('/err?sid=' + session_id)
+    error_text = ERRCD.get(error_code, "Unknown error")
+    error_code = ERRN.get(error_code, "Unknown error code")
+    return render(request, template_name, {'session_id': session_id, 'error_text': error_text, 'error_code': error_code})
